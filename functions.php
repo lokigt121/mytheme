@@ -105,11 +105,12 @@ function add_login_logout_link($items, $args) {
     $items .= '<li>'. $loginoutlink .'</li>';
 
     return $items;}
+    
 
-    function login_redirect() {
-        return '/';
-        }
-        add_filter('login_redirect', 'login_redirect');
+function login_redirect() {
+    return '/';
+    }
+add_filter('login_redirect', 'login_redirect');
 
 
 
