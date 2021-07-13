@@ -106,12 +106,13 @@ function add_login_logout_link($items, $args) {
 
     return $items;}
 
-function redirect_users_after_login() {
-	wp_redirect( '/test_task' );
-        exit;
-}
+    function login_redirect() {
+        return '/';
+        }
+        add_filter('login_redirect', 'login_redirect');
 
-add_action( 'admin_init', 'redirect_users_after_login' );
+
+
 
 function onlyregistered_func() {
 
